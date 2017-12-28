@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.me.code</groupId>
+    <artifactId>ali.study</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <!-- 开发者 -->
+    <developers>
+        <developer>
+            <name>ali</name>
+            <email>zhull_alice@163.com</email>
+            <url>https://github.com/zhull</url>
+        </developer>
+    </developers>
+    <!-- 贡献者 -->
+    <contributors>
+        <contributor>
+            <name>ali</name>
+            <email>zhull_alice@163.com</email>
+            <url>https://github.com/zhull</url>
+        </contributor>
+    </contributors>
+
+    <modules>
+        <module>study</module>
+    </modules>
+
+    <properties>
+        <!-- 插件管理 start -->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <java.version>1.8</java.version>
+        <plugin.maven.compiler.version>3.3</plugin.maven.compiler.version>
+        <plugin.maven.deploy.version>2.8.2</plugin.maven.deploy.version>
+        <plugin.maven.resources.version>3.0.2</plugin.maven.resources.version>
+        <plugin.maven.javadoc.version>3.0.0-M1</plugin.maven.javadoc.version>
+        <plugin.maven.source.version>3.0.1</plugin.maven.source.version>
+        <!-- 插件管理 end -->
+    </properties>
+
+    <profiles>
+        <profile>
+            <id>dev</id>
+            <properties>
+                <env>dev</env>
+            </properties>
+        </profile>
+    </profiles>
+
+    <!-- 插件管理 -->
+    <build>
+        <!-- 可以用maven控制激活的profile，在配置文件中@env@引用 -->
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <includes>
+                    <include>**/*</include>
+                </includes>
+                <filtering>true</filtering>
+            </resource>
+        </resources>
+
+        <pluginManagement>
+            <plugins>
+                <!-- Maven默认安装的插件，这里只是修改一些默认属性，和声明版本，子pom不需要声明 start -->
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>${plugin.maven.compiler.version}</version>
+                    <configuration>
+                        <source>${java.version}</source>
+                        <target>${java.version}</target>
+                        <!-- 指定编码格式，否则在DOS下运行mvn compile命令时会默认使用GBK编码 -->
+                        <encoding>${project.build.sourceEncoding}</encoding>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+
+</project>
