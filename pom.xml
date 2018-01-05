@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.me.code</groupId>
-    <artifactId>ali.study</artifactId>
+    <artifactId>study.case</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
@@ -31,6 +31,10 @@
     </modules>
 
     <properties>
+        <!-- 第三方jar包 -->
+        <junit.version>4.12</junit.version>
+        <lombok.version>1.16.18</lombok.version>
+
         <!-- 插件管理 start -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>1.8</java.version>
@@ -41,6 +45,25 @@
         <plugin.maven.source.version>3.0.1</plugin.maven.source.version>
         <!-- 插件管理 end -->
     </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <!-- https://mvnrepository.com/artifact/junit/junit -->
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>${junit.version}</version>
+                <scope>test</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok.version}</version>
+            </dependency>
+
+        </dependencies>
+    </dependencyManagement>
 
     <profiles>
         <profile>
