@@ -24,5 +24,30 @@
         <td>
             refactor
         </td>
+    </tr> 
+    <tr>
+        <td>
+            无符号右移运算符>>>
+        </td>
+        <td>
+            ShiftOperator.java
+        </td>
     </tr>
+    <tr>
+        <td>
+            数值类型的转型
+        </td>
+        <td>
+            NumCast.java
+        </td>
+    </tr>
+    <tr>
+        <td>
+            静态元素初始化
+        </td>
+        <td>
+            StaticInitialization.java
+        </td>
+    </tr>
+    
 </table>
