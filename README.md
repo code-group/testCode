@@ -43,10 +43,10 @@
     </tr>
     <tr>
         <td>
-            静态元素初始化
+            静态元素
         </td>
         <td>
-            StaticInitialization.java
+            statics
         </td>
     </tr>
     

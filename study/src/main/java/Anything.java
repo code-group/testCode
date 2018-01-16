@@ -1,28 +1,34 @@
 /**
- * @author: zhull
- * <P>date: 2018/1/4</P>
+ * @author zhull
+ * @date 2018/1/16</P>
  * <P>description: </P>
  */
-public class Anything {
-
-    private static String aString;
-
+public class Anything extends Ball{
     public static void main(String[] args) {
 
-        testStatic(new Anything());
-
     }
+}
 
-    public static void testStatic(Anything anything) {
-        anything.print();
-    }
+abstract class Instrument {
 
-    public void print() {
-        System.out.println("hello");
-        try {
-            this.finalize();
-        } catch (Throwable throwable) {
-            throwable.printStackTrace();
-        }
+}
+
+abstract class Ball {
+
+}
+
+interface A {
+    void common();
+}
+
+interface B {
+    void common();
+}
+
+class C implements A, B{
+
+    @Override
+    public void common() {
+
     }
 }

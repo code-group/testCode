@@ -1,3 +1,5 @@
+package statics;
+
 /**
  * <P>created by zhull, on 2018/1/12</P>
  * <P>description: static初始化</P>
