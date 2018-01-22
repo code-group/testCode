@@ -6,7 +6,7 @@
             测试用例
         </td>
         <td>
-            testcase
+            (package)testcase
         </td>
     </tr>
     <tr>
@@ -22,7 +22,7 @@
             重构
         </td>
         <td>
-            refactor
+            (package)refactor
         </td>
     </tr> 
     <tr>
@@ -46,7 +46,39 @@
             静态元素
         </td>
         <td>
-            statics
+            (package)statics
+        </td>
+    </tr>
+    <tr>
+        <td>
+            this.toString()栈溢出
+        </td>
+        <td>
+            CrashJava.java
+        </td>
+    </tr>
+    <tr>
+        <td>
+            对象序列化
+        </td>
+        <td>
+            SerializationClass.java
+        </td>
+    </tr>
+    <tr>
+        <td>
+            运行期类型鉴定
+        </td>
+        <td>
+            RuntimeTypeIdentification.java
+        </td>
+    </tr>
+    <tr>
+        <td>
+            克隆
+        </td>
+        <td>
+            Snake.java
         </td>
     </tr>
     
