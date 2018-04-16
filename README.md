@@ -81,5 +81,13 @@
             Snake.java
         </td>
     </tr>
+    <tr>
+        <td>
+            invokeVirtual指令
+        </td>
+        <td>
+            InvokeVirtual.java
+        </td>
+    </tr>
     
 </table>

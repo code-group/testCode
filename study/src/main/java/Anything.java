@@ -11,9 +11,8 @@ public class Anything {
 
 
     public static void main(String[] args) {
-        System.out.println(getNormalAmount(20L, 3));
-        System.out.println(getNormalAmount(10L, 3));
-        System.out.println(getNormalAmount(13L, 2));
+        Son son = new Son();
+        son.thinking();
     }
 
     static Long getNormalAmount(Long a, int b) {
@@ -21,4 +20,6 @@ public class Anything {
         System.out.println("! " + normalAmount);
         return normalAmount.longValue();
     }
+
 }
+
