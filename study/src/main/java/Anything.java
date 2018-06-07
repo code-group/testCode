@@ -11,14 +11,18 @@ public class Anything {
 
 
     public static void main(String[] args) {
-        Son son = new Son();
-        son.thinking();
+        System.out.println(getContractName("/files/hello/哈哈.pdf"));
     }
 
     static Long getNormalAmount(Long a, int b) {
         BigDecimal normalAmount = new BigDecimal(a).divide(new BigDecimal(b), BigDecimal.ROUND_HALF_UP);
         System.out.println("! " + normalAmount);
         return normalAmount.longValue();
+    }
+
+    private static String getContractName(String contractPath) {
+        String fileName = contractPath.substring(contractPath.lastIndexOf('/') + 1, contractPath.length()-".pdf".length());
+        return fileName;
     }
 
 }
