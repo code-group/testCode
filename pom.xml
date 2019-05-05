@@ -34,7 +34,8 @@
         <!-- 第三方jar包 -->
         <junit.version>4.12</junit.version>
         <lombok.version>1.16.18</lombok.version>
-        <groovy.version>1.16.18</groovy.version>
+        <groovy.version>2.4.12</groovy.version>
+        <json.version>1.2.58</json.version>
 
         <!-- 插件管理 start -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -67,6 +68,12 @@
                 <groupId>org.codehaus.groovy</groupId>
                 <artifactId>groovy</artifactId>
                 <version>${groovy.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>${json.version}</version>
             </dependency>
 
         </dependencies>
